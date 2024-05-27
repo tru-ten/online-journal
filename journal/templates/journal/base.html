@@ -30,8 +30,8 @@
             <li><a href="{% url 'home' %}" class="nav-link px-2 link-secondary">На головну</a></li>
             {% if user.is_authenticated %}
                 <li><a href="{% url 'create_article' %}" class="nav-link px-2">Створення статті</a></li>
-                <li><a href="{% url 'edit' %}" class="nav-link px-2">Редагування статтей</a></li>
-                <li><a href="{% url 'delete' %}" class="nav-link px-2">Видалення статтей</a></li>
+                <li><a href="{% url 'edit' %}" class="nav-link px-2">Редагування статей</a></li>
+                <li><a href="{% url 'delete' %}" class="nav-link px-2">Видалення статей</a></li>
             {% endif %}
             <!-- <li><a href="#" class="nav-link px-2">Features</a></li>
             <li><a href="#" class="nav-link px-2">Pricing</a></li>
