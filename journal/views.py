@@ -166,7 +166,7 @@ def creating_article(request):
     return redirect('article_detail', article_slug)
 
 def edit(request):
-    articles = Article.objects.all().order_by('-created_at')
+    articles = Article.objects.filter(author=request.user).order_by('-created_at')
 
     context = {
         'articles':articles,
@@ -259,7 +259,7 @@ def editing_article(request):
     # return render(request, 'journal/editing_article.html')
 
 def delete(request):
-    articles = Article.objects.all().order_by('-created_at')
+    articles = Article.objects.filter(author=request.user).order_by('-created_at')
 
     context = {
         'articles':articles,
