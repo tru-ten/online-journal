@@ -19,6 +19,7 @@
 <div class="row mb-2">
     <div class="col-md">
         <form method="get" action="">
+          {% csrf_token %}
             <div class="input-group mb-3">
                 <input type="text" name="q" class="form-control" placeholder="Пошук..." value="{{ request.GET.q }}">
             </div>
